@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChatBot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h4 id='mainHeader'>ChatBot</h4>
+      <div class="chatbot-message"></div>
+      <form onsubmit="return chat()" name="chatForm">
+        <div class="input-group mb-3 mt-4">
+          <input type="text" name="userMessage" id="userMessage" class="form-control" placeholder="Napisz coś do chatbota..." autofocus />
+          <div class="input-group-append">
+            <input type="submit" class="btn btn-primary" />
+          </div>
+        </div>
+      </form>
+
+      <h4>Dodaj pytania!</h4>
+
+      <form onsubmit="return addQuestion()" name="addQuestionForm">
+        <div class="input-group mt-4">
+          <input type="text" name="question" id="question" class="form-control" placeholder="Pytanie" />
+          <input type="text" name="answer" id="answer" class="form-control" placeholder="Odpowiedź" />
+          <div class="input-group-append"><input type="submit" class="btn btn-primary" /></div>
+        </div>
+      </form>
+
+      <button onclick="$('.chatbot-message').text('')" class="btn btn-primary">Wyczyść</button>
+    </div>
+    <script src='intro.js'></script>
+    <script src='questions.js'></script>
+    <script src='chatbot.js'></script>
+  </body>
+</html>
