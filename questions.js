@@ -8,10 +8,12 @@ questions = {
 }
 
 emotikonki = {
-  'uśmiechnięta twarz': '😀',
+  'uśmiechnięta twarz': '🙂',
   'wesoła twarz': '😀',
   'twarz ze łzami radości': '😂',
   'twarz w okularach słonecznych': '😎',
+  'twarz z okularami słonecznymi': '😎',
   'twarz z sercowymi oczami': '😍',
-  'twarz przesyłająca całusa': '😘'
+  'twarz przesyłająca całusa': '😘',
+  'twarz bez buzi':'😶',
 }

@@ -2,12 +2,12 @@ function answerQuestion(message) {
   return questions[message]
 }
 function chat() {
-  let userMessage = document.forms["chatForm"]["userMessage"].value.toLowerCase();
-  a = answerQuestion(userMessage);
-  if(userMessage == "otwórz stronę") {
+  let m = document.forms["chatForm"]["m"].value.toLowerCase();
+  a = answerQuestion(m);
+  if(m == "otwórz stronę" || m) {
     site = prompt('Jaką stronę chcesz otworzyć? (zacznij od https:// lub http://)\nStrona zostanie otwarta w tej karcie. Jeśli nie chcesz jej otwierać, nic nie wpisuj lub kliknij ANULUJ')
     if (site != "" && site != null && site != 'https://' && site != 'http://') { window.location.href = site; }
-  } else if (userMessage == "wyświetl emotikonki") {
+  } else if (m == "wyświetl emotikonki") {
     emotikonka = prompt("Jaką byś chciał(a) emotikonkę?").toLowerCase()
     zdj_emotikonki = emotikonki[emotikonka]
     if(zdj_emotikonki == null) {
@@ -17,11 +17,11 @@ function chat() {
       $('.chatbot-message').html($('.chatbot-message').html() + "Ja: " + emotikonki[emotikonka] + "<br />");
     }
   } else {
-    if (userMessage != "" && userMessage != 'null' && questions[userMessage]) {
-      $('.chatbot-message').html($('.chatbot-message').html() + "Ty: " + userMessage + "<br />");
-      $('.chatbot-message').html($('.chatbot-message').html() + "Ja: " +  questions[userMessage] + "<br />");
-      document.forms["chatForm"]["userMessage"].value = "";
-    } else if(questions[userMessage] == undefined && userMessage != "" && userMessage != 'null') {
+    if (m != "" && m != 'null' && questions[m]) {
+      $('.chatbot-message').html($('.chatbot-message').html() + "Ty: " + m + "<br />");
+      $('.chatbot-message').html($('.chatbot-message').html() + "Ja: " +  questions[m] + "<br />");
+      document.forms["chatForm"]["m"].value = "";
+    } else if(questions[m] == undefined && m != "" && m != 'null') {
       alert('przepraszam, ale nie rozumiem...')
     }
   }
