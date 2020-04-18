@@ -22,9 +22,9 @@
           </div>
         </div>
       </form>
-
+      
       <h4>Dodaj pytania!</h4>
-
+      
       <form onsubmit="return addQuestion()" name="addQuestionForm">
         <div class="input-group mt-4">
           <input type="text" name="question" id="question" class="form-control" placeholder="Pytanie" />
@@ -32,13 +32,13 @@
           <div class="input-group-append"><input type="submit" class="btn btn-primary" /></div>
         </div>
       </form>
-
+      
       <button onclick="$('.chatbot-message').text('')" class="btn btn-primary mb-3">Wyczyść</button>
-
-      <h4>Co nowego w wersji <span class='courier'><strong>1.1</strong></span>?</h4>
-
+      
+      <h4>Co nowego w wersji <strong class='botVersion courier'></strong>?</h4>
+      
       <ul>
-        <li>Od teraz nie ma znacznia czy wpiszesz małą czy wielką literę</li>
+        <li>Zapamiętywana historia czatu</li>
         <li>Nowe pytania które rozumie chatbot</li>
       </ul>
     </div>

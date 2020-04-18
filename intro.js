@@ -1,3 +1,4 @@
+let currentVersion  = '1.3'
 let name = getCookie('name')
 if(name == '') {
   name = prompt("Jak masz na imię?")
@@ -6,12 +7,11 @@ if(name == '') {
   }
 }
 if(getCookie('name') == '') {
-  console.log('hej')
   let saveToCookie = confirm('Zapisać wybór?')
   if (saveToCookie) {
-    console.log(document.cookie)
-    setCookie('name', name, 4)
-    console.log(document.cookie)
+    setCookie('name', name, 24)
   }
 }
-$('#mainHeader').html("Cześć, " + name + ', poniżej prezentujemy chatbota <span class="courier"><strong>v. 1.1</strong></span>')
+$('.chatbot-message').html(getCookie('chatHistory'))
+$('#mainHeader').html("Cześć, " + name + ', poniżej prezentujemy chatbota <span class="courier"><strong>v. ' + currentVersion + '</strong></span>')
+$('.botVersion').html(currentVersion)

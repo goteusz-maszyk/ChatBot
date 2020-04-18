@@ -3,8 +3,9 @@ questions = {
   "ile masz lat?": "Zostałem stworzony przez Goteusza Maszyka w 2020 roku podczas kwarantanny",
   'hej': 'hej',
   'cześć': 'cześć',
-  'co tam?': 'Nie wiem czy wiesz, ale wyszła nowa wersja - <span class="courier"><strong>1.1</strong></span>',
+  'co tam?': 'Nie wiem czy wiesz, ale wyszła nowa wersja - <span class="courier"><strong>'+ currentVersion +'</strong></span>',
   'o fajnie!': 'No... 😀',
+  'spadaj': '<a href="javascript:history.back()">Kliknij mnie!</a>'
 }
 
 emotikonki = {

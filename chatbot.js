@@ -4,9 +4,9 @@ function answerQuestion(message) {
 function chat() {
   let m = document.forms["chatForm"]["m"].value.toLowerCase();
   a = answerQuestion(m);
-  if(m == "otwórz stronę" || m) {
+  if(m == "otwórz stronę") {
     site = prompt('Jaką stronę chcesz otworzyć? (zacznij od https:// lub http://)\nStrona zostanie otwarta w tej karcie. Jeśli nie chcesz jej otwierać, nic nie wpisuj lub kliknij ANULUJ')
-    if (site != "" && site != null && site != 'https://' && site != 'http://') { window.location.href = site; }
+    if (site != "" && site != null) { window.location.href = site; }
   } else if (m == "wyświetl emotikonki") {
     emotikonka = prompt("Jaką byś chciał(a) emotikonkę?").toLowerCase()
     zdj_emotikonki = emotikonki[emotikonka]
@@ -25,6 +25,7 @@ function chat() {
       alert('przepraszam, ale nie rozumiem...')
     }
   }
+  setCookie('chatHistory', $('.chatbot-message').html(), 48)
   return false
 }
 function addQuestion() {
