@@ -11,10 +11,18 @@ questions = {
 emotikonki = {
   'uśmiechnięta twarz': '🙂',
   'wesoła twarz': '😀',
+  'uśmiech': '🙂',
   'twarz ze łzami radości': '😂',
   'twarz w okularach słonecznych': '😎',
   'twarz z okularami słonecznymi': '😎',
   'twarz z sercowymi oczami': '😍',
   'twarz przesyłająca całusa': '😘',
   'twarz bez buzi':'😶',
+  'kobieta':'👩',
+  'baba':'👵',
+  'mężczyzna':'👨',
+  'pizza':'🍕',
+  'hot dog':'🌭',
+  'hotdog':'🌭',
+  'policjant':'👨‍✈️',
 }

@@ -7,7 +7,7 @@ function chat() {
   if(m == "otwórz stronę") {
     site = prompt('Jaką stronę chcesz otworzyć? (zacznij od https:// lub http://)\nStrona zostanie otwarta w tej karcie. Jeśli nie chcesz jej otwierać, nic nie wpisuj lub kliknij ANULUJ')
     if (site != "" && site != null) { window.location.href = site; }
-  } else if (m == "wyświetl emotikonki") {
+  } else if (m == "wyświetl emotikonki" || m == 'emotikonki' || m == 'pokaż emotikonki' || m == 'emoji') {
     emotikonka = prompt("Jaką byś chciał(a) emotikonkę?").toLowerCase()
     zdj_emotikonki = emotikonki[emotikonka]
     if(zdj_emotikonki == null) {
