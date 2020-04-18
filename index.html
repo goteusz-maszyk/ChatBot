@@ -33,7 +33,7 @@
         </div>
       </form>
       
-      <button onclick="$('.chatbot-message').text('')" class="btn btn-primary mb-3">Wyczyść</button>
+      <button onclick="$('.chatbot-message').text(''); setCookie('chatHistory', $('.chatbot-message').html(), 48)" class="btn btn-primary mb-3">Wyczyść</button>
       
       <h4>Co nowego w wersji <strong class='botVersion courier'></strong>?</h4>
       
